@@ -1,0 +1,8 @@
+# Ignore the DuckDB database file
+warehouse/olist.duckdb
+
+# Ignore all raw dataset CSVs
+warehouse/*.csv
+
+# Ignore your Python virtual environment if you haven't already
+venv/
