@@ -1,0 +1,17 @@
+{
+    "workbench.editorAssociations": {
+        "*.parquet": "duckdb.dataFileViewer",
+        "*.csv": "duckdb.dataFileViewer",
+        "*.tsv": "duckdb.dataFileViewer",
+        "*.xlsx": "duckdb.dataFileViewer"
+    },
+    "duckdb.databases": [
+        {
+            "alias": "olist",
+            "type": "file",
+            "path": "c:\\Users\\HP\\OneDrive\\Desktop\\GitHub\\brazillian_ecommerce\\warehouse\\olist.duckdb",
+            "attached": false
+        }
+    ],
+    "duckdb.defaultDatabase": "olist"
+}
