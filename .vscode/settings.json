@@ -8,9 +8,9 @@
     "duckdb.databases": [
         {
             "alias": "olist",
-            "type": "file",
-            "path": "c:\\Users\\HP\\OneDrive\\Desktop\\GitHub\\brazillian_ecommerce\\warehouse\\olist.duckdb",
-            "attached": false
+            "type": "manual",
+            "sql": "ATTACH 'C:/Users/HP/OneDrive/Desktop/GitHub/brazillian_ecommerce/warehouse/olist.duckdb' AS olist;",
+            "attached": true
         }
     ],
     "duckdb.defaultDatabase": "olist"
