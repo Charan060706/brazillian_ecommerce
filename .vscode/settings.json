@@ -10,7 +10,7 @@
             "alias": "olist",
             "type": "manual",
             "sql": "ATTACH 'C:/Users/HP/OneDrive/Desktop/GitHub/brazillian_ecommerce/warehouse/olist.duckdb' AS olist;",
-            "attached": true
+            "attached": false
         }
     ],
     "duckdb.defaultDatabase": "olist"
