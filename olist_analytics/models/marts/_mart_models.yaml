@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "The core master file for customer-centric analysis, providing lifetime value dimensions."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    description: "The primary fact table for financial and operational tracking of orders."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: payment_deficit
+        description: "Calculated difference between cost owed and amount paid. Should ideally be 0."
