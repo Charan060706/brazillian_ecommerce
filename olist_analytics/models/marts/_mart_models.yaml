@@ -8,6 +8,8 @@ models:
         tests:
           - unique
           - not_null
+      - name: state
+        descripiton: "Two-letter state code of the customer location in Brazil."
 
   - name: fct_orders
     description: "The primary fact table for financial and operational tracking of orders."
@@ -16,5 +18,29 @@ models:
         tests:
           - unique
           - not_null
+      - name: customer_key
+        tests:
+          - not_null
+        relationships:
+           to: 'ref("dim_customers")'
+           field: customer_id
       - name: payment_deficit
         description: "Calculated difference between cost owed and amount paid. Should ideally be 0."
+        tests:
+          - not_null
+      - name: delivery_delay_days
+        description: "Difference in days between actual delivery date and estimated delivery date (positive values indicate late delivery)."
+
+      - name: review_score
+        description: "Customer review score from 1 (lowest) to 5 (highest)."
+
+  - name: dim_products
+    description: "Dimension table detailing product specifications, category attributes, and English translated names."
+    columns:
+      - name: product_id
+        description: "Primary key for products."
+        tests:
+          - unique
+          - not_null
+      - name: product_category_name_english
+        description: "Translated product category name for English reporting."

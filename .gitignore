@@ -1,8 +1,20 @@
-# Ignore the DuckDB database file
-warehouse/olist.duckdb
+# DuckDB & Database Files
+*.duckdb
+*.duckdb.wal
+*.db
 
-# Ignore all raw dataset CSVs
-warehouse/*.csv
+# dbt Artifacts & Logs
+/logs/
+/target/
+dbt_packages/
 
-# Ignore your Python virtual environment if you haven't already
+# Python & Environment
+__pycache__/
+*.pyc
+.env
 venv/
+.venv/
+
+# OS Specific
+.DS_Store
+Thumbs.db
